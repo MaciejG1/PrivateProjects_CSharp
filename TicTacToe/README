@@ -1,0 +1,31 @@
+Tic-Tac-Toe Game
+This is a simple Tic-Tac-Toe application developed using C# and WPF. The primary goal of this project is to explore the basics of WPF (Windows Presentation Foundation) and understand how to build desktop applications using this technology.
+
+Project Overview
+The application implements a basic Tic-Tac-Toe game where two players take turns marking spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+
+Features
+Two-player gameplay: The game allows two players to compete against each other on the same device.
+Basic UI: The application has a simple and clean user interface to provide a straightforward user experience.
+Game Logic: Handles turns, checks for winning conditions, and manages game resets.
+
+Technology Stack
+C#
+WPF (Windows Presentation Foundation)
+
+Project Structure
+The project consists of a single class:
+-MainWindow.xaml: Defines the layout and UI components of the application, such as the game board and buttons.
+-MainWindow.xaml.cs: Contains the logic for managing the game, including:
+  >Player turns and move validation.
+  >Checking for win conditions and draw states.
+  >Handling game resets and updating the UI accordingly.
+
+Learning Objectives
+This project was created as an introductory exercise to get familiar with WPF and basic C# application development. The primary focus was on learning how to:
+Set up and navigate a WPF project.
+Implement basic game logic in C#.
+Design a simple user interface with XAML.
+Manage events and UI updates in response to user actions.
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/69c80518-7b5f-46a1-8707-a6b9c46380b1">
