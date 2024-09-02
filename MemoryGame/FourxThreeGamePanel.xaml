@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="NewMemoryGame.FourxThreeGamePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:NewMemoryGame"
+             mc:Ignorable="d"
+             d:DesignHeight="650" d:DesignWidth="810">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\MaciejG\source\repos\NewMemoryGame\Pictures\GeraltBackground.png" Stretch="UniformToFill"/>
+        </Grid.Background >
+
+        <Grid Height="120" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Turn Comment -->
+            <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"
+                       x:Name="CurrentPlayerRound"
+                           Text="{Binding CurrentPlayerMessage}"
+                       FontSize="16" FontWeight="Bold"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="0,5,0,5" Foreground="#FFA8A8A8" />
+
+            <!-- Player 1 -->
+            <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Gracz 1" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Foreground="#FFA8A8A8"/>
+                <TextBlock Text="Liczba punktów:" FontSize="14" HorizontalAlignment="Center" Foreground="#FFA8A8A8"/>
+                <TextBlock x:Name="playerOnePoints" Text="{Binding Player1Points}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FFA8A8A8"/>
+            </StackPanel>
+
+            <!-- Player 2 -->
+            <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Gracz 2" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Foreground="#FFA8A8A8"/>
+                <TextBlock Text="Liczba punktów:" FontSize="14" HorizontalAlignment="Center" Foreground="#FFA8A8A8"/>
+                <TextBlock  x:Name="playerTwoPoints" Text="{Binding Player2Points}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FFA8A8A8"/>
+            </StackPanel>
+
+            <Button Grid.Column="0" Grid.Row="1" Content="Wyjście" Foreground="#FFA8A8A8" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" Height="40" Width="100">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF110707" Opacity="0.4"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+
+        <Grid Margin="0,50,0,0" x:Name="CardsPanel" Visibility="Visible" >
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <local:FlippingCard x:Name="FlippingCard1" Grid.Column="0" Grid.Row="0" FrontSide="{Binding MyFrontSideControl1}" BackSide="{Binding MyBackSideControl1}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard2" Grid.Column="0" Grid.Row="1" FrontSide="{Binding MyFrontSideControl2}" BackSide="{Binding MyBackSideControl2}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard3" Grid.Column="0" Grid.Row="2" FrontSide="{Binding MyFrontSideControl3}" BackSide="{Binding MyBackSideControl3}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <local:FlippingCard x:Name="FlippingCard4" Grid.Column="1" Grid.Row="0" FrontSide="{Binding MyFrontSideControl4}" BackSide="{Binding MyBackSideControl4}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard5" Grid.Column="1" Grid.Row="1" FrontSide="{Binding MyFrontSideControl5}" BackSide="{Binding MyBackSideControl5}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard6" Grid.Column="1" Grid.Row="2" FrontSide="{Binding MyFrontSideControl6}" BackSide="{Binding MyBackSideControl6}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <local:FlippingCard x:Name="FlippingCard7" Grid.Column="2" Grid.Row="0" FrontSide="{Binding MyFrontSideControl7}" BackSide="{Binding MyBackSideControl7}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard8" Grid.Column="2" Grid.Row="1" FrontSide="{Binding MyFrontSideControl8}" BackSide="{Binding MyBackSideControl8}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard9" Grid.Column="2" Grid.Row="2" FrontSide="{Binding MyFrontSideControl9}" BackSide="{Binding MyBackSideControl9}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <local:FlippingCard x:Name="FlippingCard10" Grid.Column="3" Grid.Row="0" FrontSide="{Binding MyFrontSideControl10}" BackSide="{Binding MyBackSideControl10}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard11" Grid.Column="3" Grid.Row="1" FrontSide="{Binding MyFrontSideControl11}" BackSide="{Binding MyBackSideControl11}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <local:FlippingCard x:Name="FlippingCard12" Grid.Column="3" Grid.Row="2" FrontSide="{Binding MyFrontSideControl12}" BackSide="{Binding MyBackSideControl12}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+
+    </Grid>
+</UserControl>
