@@ -17,3 +17,5 @@ How to Navigate the Project This section describes the roles of each class in th
 -MainWindow: The main entry point of the application, featuring the game’s main menu and navigation to other screens, such as the game panel and rules.
 
 -MenuPanel: A placeholder class that is not currently utilized within the project. 
+
+
