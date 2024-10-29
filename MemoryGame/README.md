@@ -6,7 +6,7 @@
 - [Features](#features)
 - [Class Overview](#class-overview)
 - [Project Status](#project-status)
-- [Layout of Applcation](#Layout-of_Application)
+- [Layout of Applcation](#Layout-of-Application)
 
 ## Introduction
 **Memory Game** is a simple card-matching game inspired by the Witcher universe, built using C# and WPF. The project was created primarily to explore and familiarize myself with the WPF framework and C# fundamentals. In this game, players flip cards to find matching pairs, challenging their memory skills. The design follows WPF standards to achieve a clean interface and user experience.
